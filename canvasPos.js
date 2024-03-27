@@ -1,0 +1,11 @@
+const gC = document.getElementById("gameCanvas")
+const w = window.innerWidth
+const h = window.innerHeight
+const woh = w>h
+const s = (woh)? h : w
+const m = Math.abs(w - h) / 2
+gC.height = s
+gC.width = s
+gC.style.position = 'absolute'
+if(woh){gC.style.left = m + "px"}
+else {gC.style.top = m + "px"}
